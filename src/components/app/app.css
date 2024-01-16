@@ -1,34 +1,18 @@
-.green {
-    background-color: rgb(0, 152, 41);
-    color: white;
-    padding: 5px;
-    width: fit-content
-}
 
-li {
+
+/* li {
     border: 1px;
     background-color: rgb(231, 251, 255);
     color: black;
     padding: 5px;
     width: fit-content;
     transition: background-color 0.5s, color 0.5s
-}
+} */
 
-li:hover {
+/* li:hover {
     transform: scale(1.1);
     border: 1px solid rgb(169, 213, 222);
-}
-
-.hide {
-    display: none;
-}
-
-.lists {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: rgb(231, 251, 255);
-} 
+} */
 
 h3 {
    text-align: center;
