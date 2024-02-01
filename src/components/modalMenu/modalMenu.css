@@ -1,4 +1,5 @@
 .modalUl {
+    display: none;
     list-style-type: none;
     position: fixed;
     background: white;
@@ -7,10 +8,8 @@
     top: 50%;
     left: 50%;
     background: rgba(0, 0, 0, 0.6);
-    display: block;
     padding: 500px;
     transform: translate(-50%, -50%);
-    display: none;
 }
 
 .show {
@@ -37,9 +36,12 @@
     text-align: center;
     transition: background-color 0.5s, color 0.5s;
     border: 1px solid rgb(0, 78, 90);
+    transition: background-color 0.2s, color 0.2s
 }
 
 .modalUl li:hover {
     transform: scale(1.1);
-    border: 1px solid rgb(169, 213, 222);
+    border: 1px solid rgb(0, 102, 118);
+    background-color: antiquewhite;
+    color: rgb(0, 49, 57);
 }

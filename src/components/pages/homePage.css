@@ -1,0 +1,41 @@
+.homeBlock p {
+    width: 300px;
+    background-color: rgb(235, 255, 255);
+    color: rgb(0, 49, 57);
+    text-align: center;
+    list-style-type:  none;
+    transition: background-color 0.5s, color 0.5s;
+    border: 1px solid rgb(0, 78, 90);
+    transition: background-color 0.2s, color 0.2s;
+    margin: 10px;
+    font-size: large;
+}
+
+.homeBlock p:hover {
+    transform: scale(1.1);
+    border: 1px solid rgb(0, 54, 62);
+    background-color: rgb(0, 102, 118);
+    color: rgb(255, 255, 255);
+}
+
+.homeStyle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(/public/img/homeBg.jpg);
+    background-size: cover;
+}
+
+.homeBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(163, 240, 255);
+    color: rgb(0, 49, 57)
+}
+
+.homeBlock h1 {
+    margin-bottom: 20px;
+}
+
+

@@ -1,4 +1,8 @@
 .stopwatch {
-    background-color: rgb(16, 28, 33);
+    background-color: rgb(20, 35, 42);
     color: aliceblue;
 }
+
+h3 {
+    text-align: center;
+ }

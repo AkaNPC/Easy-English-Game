@@ -6,3 +6,7 @@
     margin-top: 10px;
 }
 
+.topBar h4, .topBar h5 {
+    color: rgb(20, 35, 42);
+}
+

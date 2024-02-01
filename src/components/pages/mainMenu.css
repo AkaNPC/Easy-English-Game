@@ -6,12 +6,19 @@
     list-style-type:  none;
     transition: background-color 0.5s, color 0.5s;
     border: 1px solid rgb(0, 78, 90);
+    transition: background-color 0.2s, color 0.2s
 }
 
 .mainMenu {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(/public/img/mainMenuBg.jpg);
+    background-size: cover;
 }
 
 .mainMenu li:hover {
@@ -19,5 +26,9 @@
     border: 1px solid rgb(0, 102, 118);
     background-color: antiquewhite;
     color: rgb(0, 49, 57);
+}
+
+.hide {
+    display: none;
 }
 

@@ -1,15 +1,16 @@
 import React from "react";
 import './mainMenu.css';
+import { Link } from "react-router-dom";
 
-export default function MainMenu() {
+export default function MainMenu({toggleHighScoreVisible}) {
 
 
     return (
         <div className="mainMenu">
             <li>
-                Режимы игры
+            <Link to="/translateVerbsGame" style={{ color: 'inherit', textDecoration: 'inherit' }}>Начать игру</Link>
             </li>
-            <li>
+            <li onClick={toggleHighScoreVisible}>
                 Таблица рекордов
             </li>
             <li>
@@ -18,6 +19,7 @@ export default function MainMenu() {
             <li>
                 Выход
             </li>
+
         </div>
     )
 }

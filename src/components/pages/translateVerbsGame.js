@@ -1,6 +1,9 @@
 import React from "react";
 import RowBlock from "../rowBlock/rowBlock";
+import ErrorMessage from "../errorMessage/errorMessage";
 import './translateVerbsGame.css';
+import InfoBar from "../infoBar/infoBar";
+import GameTimer from "../gameTimer/gameTimer";
 
 const engVerbsList = [{ id: 1, word: 'be' }, { id: 2, word: 'have' }, { id: 3, word: 'do' }, { id: 4, word: 'say' }, { id: 5, word: 'go' }, { id: 6, word: 'get' },
 { id: 7, word: 'make' }, { id: 8, word: 'know' }, { id: 9, word: 'think' }, { id: 10, word: 'take' }, { id: 11, word: 'see' }, { id: 12, word: 'come' },
@@ -49,10 +52,17 @@ export default class TranslateVerbsGame extends React.Component {
         super(props);
         this.state = {
             engWordsClicked: [],
-            rusWordsClicked: []
+            rusWordsClicked: [],
+            error: false
         }
         this.handlerClick1 = this.handlerClick1.bind(this);
         this.handlerClick2 = this.handlerClick2.bind(this);
+    }
+
+    componentDidCatch() {
+        this.setState({
+            error: true
+        })
     }
 
     componentDidUpdate(prevState) {
@@ -93,14 +103,18 @@ export default class TranslateVerbsGame extends React.Component {
         else if (this.state.engWordsClicked.length !== 0) {
             this.props.incorrectCountIncr();
         };
-        if(this.state.engWordsClicked.length === 0) {
-alert("Выберите пожалуйста сначала слово из левого столбца")
+        if (this.state.engWordsClicked.length === 0) {
+            alert("Выберите пожалуйста сначала слово из левого столбца")
         }
-        console.log(this.state)
     }
 
     render() {
+        if (this.state.error) {
+            return <ErrorMessage />
+        }
         const { engWordsClicked, rusWordsClicked } = this.state;
+        const { isTimeRunning, correctCount, incorrectCount, finalTime, currentPlayerName } = this.props;
+
         const renderListEng = list1.map((item, index) =>
             <li
                 key={index}
@@ -119,6 +133,17 @@ alert("Выберите пожалуйста сначала слово из ле
 
         return (
             <div className="lists">
+                <InfoBar
+                    correctCount={correctCount}
+                    incorrectCount={incorrectCount} 
+                    currentPlayerName={currentPlayerName}/>
+                <GameTimer
+                    correctCount={correctCount}
+                    isTimeRunning={isTimeRunning}
+                    getFinalTime={this.props.getFinalTime}
+                    updatePlayerHighScore={this.props.updatePlayerHighScore}
+                    finalTime={finalTime} 
+                    currentPlayerName={currentPlayerName}/>
                 <RowBlock left={renderListEng} right={renderListRus} />
             </div>
         )
