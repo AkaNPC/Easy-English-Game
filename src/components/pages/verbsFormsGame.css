@@ -1,0 +1,49 @@
+.verbsFormsStyle {
+    display: flex;
+    flex-direction: column
+}
+
+.infinitiveStyle, .pastSimpleStyle, .pastPartStyle, .answerInputStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    background-color: rgb(235, 251, 255);
+    border: 1px solid;
+}
+
+.verbStyle {
+    text-decoration: underline
+}
+
+.answerInputStyle input {
+    width: 400px;
+}
+
+.answerInputStyle p {
+    margin-top: 10px;
+    width: 150px;
+    background-color: rgb(0, 49, 57);
+    color: rgb(235, 255, 255);
+    text-align: center;
+    list-style-type:  none;
+    transition: background-color 0.5s, color 0.5s;
+    border: 1px solid rgb(0, 78, 90);
+    transition: background-color 0.2s, color 0.2s;
+    font-size: large;
+}
+
+.answerInputStyle p:hover {
+    transform: scale(1.1);
+    border: 1px solid rgb(0, 102, 118);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 54, 62);
+}
+
+.hide {
+    display: none;
+}
+
+.roundCountStyle {
+    text-align: center;
+}

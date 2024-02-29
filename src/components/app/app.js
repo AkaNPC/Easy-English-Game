@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from "../layouts/homePageLayout";
 import MainMenu from "../pages/mainMenu";
 import HighScoreTable from "../highScoreTable/highScoreTable";
+import VerbsFormsGame from "../pages/verbsFormsGame";
 
 export default class App extends React.Component {
     constructor(props) {
@@ -151,6 +152,9 @@ export default class App extends React.Component {
                             finalTime={finalTime} 
                             currentPlayerName={currentPlayerName}/>}
                         />
+                        <Route path="/verbsFormsGame" element={<VerbsFormsGame
+                        currentPlayerName={currentPlayerName}
+                        />}></Route>
 
                         <Route path="*" element={<h1>Указан неправильный url-адрес. Такая страница не существует</h1>} />
                     </Routes>
