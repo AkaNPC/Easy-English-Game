@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+###Description/Описание
+Supports only russian language (поддержка только русского языка).
+В ближайшее время планирую:
+-исправить определенные баги и разделить большие компоненты на подкомпоненты в соответствии с SOLID;
+-произвести полный рефакторинг кода (включая использование Redux и только функциональных компонентов);
+-произвести рефакторинг CSS с использованием Sass или Tailwind;
+-добавить поддержку популярных экранов (мобильные устройства);
+-добавить новый режим игры "кроссворды" с английскими словами c использованием WordsAPI.
